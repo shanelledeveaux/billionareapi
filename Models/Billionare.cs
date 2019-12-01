@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -8,20 +8,18 @@ using Microsoft.EntityFrameworkCore.Scaffolding.Metadata.Internal;
 
 namespace BillionareApi.Models
 {
-    public class Person
+    public class Billionare
     {
         [Key]
         public int PersonId { get; set; }
-        public string FullName { get; set; }
-        public string CommonName { get; set; }
-        public int BirthYear { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public DateTime BirthDate{ get; set; }
         public string Description { get; set; }
-        public string Notes { get; set; }
+        public int NetWorth { get; set; }
         public virtual Pronoun Pronoun { get; set; }
-        public int DeathYear { get; set; }
-        public ICollection<Accomplishment> Accomplishments { get; set; }
+        public ICollection<BillionareAccomplishment> BillionareAccomplishments { get; set; }
+        public ICollection<BillionareIncomeSource> BillionareIncomeSources { get; set; }
         public ICollection<Education> Education { get; set; }
-        public ICollection<Employment> Employment { get; set; }
-        public ICollection<OtherAssociation> OtherAssociations { get; set; }
     }
 }

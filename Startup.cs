@@ -39,7 +39,7 @@ namespace BillionareApi
     options.SwaggerDoc("v1", new Info
     {
         Version = "v1",
-        Title = "Billionare API"
+        Title = "Billionare"
     });
 
     // Add XML comment document by uncommenting the following
@@ -62,7 +62,7 @@ namespace BillionareApi
                 app.UseHsts();
             }
             app.UseSwagger(options => options.PreSerializeFilters.Add((swagger, httpReq) => swagger.Host = httpReq.Host.Value));
-            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "Billionare V1"));
+            app.UseSwaggerUI(options => options.SwaggerEndpoint("/swagger/v1/swagger.json", "WWC V1"));
             app.UseHttpsRedirection();
             app.UseMvc();
         }

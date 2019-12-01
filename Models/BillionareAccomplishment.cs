@@ -8,14 +8,12 @@ using Microsoft.EntityFrameworkCore.Scaffolding.Metadata.Internal;
 
 namespace BillionareApi.Models
 {
-    public class Accomplishment
+    public class BillionareAccomplishment
     {
         [Key]
         public int AccomplishmentId { get; set; }
-        public string Type { get; set; }
         public string Description { get; set; }
-        public string ShortDescription { get; set; }
         public int Year { get; set; }
-        public virtual Person Person { get; set; }
+        public virtual Billionare Billionare { get; set; }
     }
 }

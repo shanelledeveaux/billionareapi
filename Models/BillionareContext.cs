@@ -12,13 +12,11 @@ namespace BillionareApi.Models
         {
 
         }
-        public DbSet<Person> People { get; set; }
-        public DbSet<Accomplishment> Accomplishment { get; set; }
+        public DbSet<Billionare> Billionare { get; set; }
+        public DbSet<BillionareAccomplishment> BillionareAccomplishment { get; set; }
         public DbSet<Education> Education { get; set; }
-        public DbSet<Employment> Employment { get; set; }
-        public DbSet<Home> Home { get; set; }
-        public DbSet<OtherAssociation> OtherAssociation { get; set; }
+        public DbSet<BillionareIncomeSource> BillionareIncomeSource { get; set; }
         public DbSet<Pronoun> Pronoun { get; set; }
-
+        public DbSet<Product> Products { get; set; }
     }
 }

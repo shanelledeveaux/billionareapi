@@ -18,18 +18,21 @@ namespace BillionareApi.Controllers
         }
 
         [HttpGet]
-        public IQueryable<Person> GetAll()
+        public IQueryable<Billionare> GetAllBillionares()
         {
-            var people = _context.People
-                .Include(a => a.Pronoun)
-                .Include(a => a.Accomplishments)
-                .Include(a => a.Education)
-                    .ThenInclude(b => b.Location)
-                .Include(a => a.OtherAssociations);
+            var people = _context.Billionare
+                .Include(a => a.BillionareIncomeSources)
+                .Include(a => a.BillionareAccomplishments)
+                .Include(a => a.Education);
 
             return people;
-
         }
+
+        // [HttpGet]
+        // public IQueryable<Product> GetAllPurchases()
+        // {
+        //     return _context.Products;
+        // }
     }
 }
 
