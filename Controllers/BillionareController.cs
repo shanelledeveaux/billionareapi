@@ -27,12 +27,6 @@ namespace BillionareApi.Controllers
 
             return people;
         }
-
-        // [HttpGet]
-        // public IQueryable<Product> GetAllPurchases()
-        // {
-        //     return _context.Products;
-        // }
     }
 }
 
